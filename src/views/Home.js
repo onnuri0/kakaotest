@@ -16,11 +16,6 @@ class Home extends Component {
       'Content-Type': 'application/json; charset=UTF-8'
   }})
       .then(res=> {
-          // let status = res.status
-          // if(status === 200){
-          //     return res.data;
-          // }
-          const data = res.json();
           console.log(res);
       })
       .catch(err => {

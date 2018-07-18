@@ -4,20 +4,26 @@ import './index.css';
 import {BrowserRouter,  Route, Switch} from 'react-router-dom';
 
 
+import { createStore, applyMiddleware, combineReducers  } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
+import reducer from './modules';
+import penderMiddleware from 'redux-pender';
+import { sessionService  } from 'redux-react-session';
+import 'babel-polyfill';
+
 import App from './views/App';
 import Home from './views/Home'; 
 import Oauth from './views/Oauth';
 // import Full from './containers/Full/';
 
-ReactDOM.render((
-    // <Router history={BrowserRouter}>
-    //     <Route path="/" component={App}>
-    //         <IndexRoute component={Home}/>
-    //         <Route path="oauth" component={Oauth}/>
-    //     </Route>
-    // </Router>,          
-    // document.getElementById('root')
+const logger = createLogger();
 
+const store = createStore(reducer, applyMiddleware(logger, thunk, penderMiddleware()));
+
+sessionService.initSessionService(store);
+
+ReactDOM.render((
     <BrowserRouter> 
         <Switch>
             <Route path="/home" name="Home" component={Home}/>
