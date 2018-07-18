@@ -2,7 +2,7 @@
 import axios from 'axios';
 import DeviceStorage from 'react-device-storage';
 
-const API_URL = apiurl.coffee+"/api";
+const API_URL = "/api";
 const storage = new DeviceStorage({
     cookieFallback: true
 }).sessionStorage();

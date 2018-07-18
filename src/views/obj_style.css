@@ -1,0 +1,580 @@
+/* *{
+    font-family:'NanumSquare' !important;
+} */
+body{
+    background-color:#fff !important;
+}
+
+
+Button{
+    
+    border-radius:4px !important;
+    margin-bottom: 15px !important;
+
+}
+
+.buttonA {
+    background:#1bc9e4 !important;
+    color: #fff !important; 
+}
+
+.buttonA:hover{
+    background-color: #0bb3ce !important;
+    color: white;
+}
+.rowLine{
+    border-bottom: 1px solid #f0f4f4;
+    height: 50px;
+}
+.table thead th {
+    background: #f5f9f9;
+    border-bottom: 1px solid #a4b7c1 !important;
+    text-align:center;
+}
+.table th, .table td {
+    text-align:center;
+}
+.sidebar {
+    background: linear-gradient(#3ba6de,#22569f) !important;
+    line-height: 2;
+}
+.sidebar .nav-link i, .sidebar .navbar , .navbar .sidebar i{
+    color:#fff !important;
+}
+.sidebar .nav-link.active, .sidebar .navbar {
+    background:#173066 !important;
+}
+.app-footer{
+    border-top:none !important;
+}
+
+
+.app-header.navbar .navbar-toggler-icon{
+    height: 17px !important;
+    width: 20px !important;
+    margin-top: 10px !important;
+    background-image: url(./img/hamburger_menu.png) !important;
+} 
+.breadcrumb{
+    border-bottom: none !important;
+}
+
+/* 화면 600px 이하 */
+@media only screen and (max-width: 600px) {
+    body{
+        line-height: 2.5 !important;
+    }
+    .col_6{
+        min-width:100%;
+         flex: 0 0 100%;
+     }
+    .col_3{
+       width:100%;
+        flex: 0 0 100%;
+    }
+    .weeklyMeeing_Title{
+        float: left;
+    }
+    .weekyR{
+        float:right;
+    }
+    /*불참사유*/
+    .absence
+    {
+       max-width: 100%;
+       flex: 1 0 100%;
+    }
+    #exampleText{
+        height: 100px;
+    }
+    .col_9{
+        max-width:100%;
+        flex: 1 0 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+     }
+     .table th, .table td{
+         padding:0px !important;
+     }
+    /* Dashboard_S */
+    #dashboard {
+        font-size: 20px;
+        cursor: pointer;
+        text-align:center;
+    }
+   .coffee{
+     background-color:#fafafa;
+     width: 100%;
+     float:left;
+     height: 350px;
+     border-bottom: 1px solid #eee;
+     /* background-image: url(./img/coffee.png); */
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    }
+   .coffee:hover{
+       background-color:#a9de7e;
+   }
+   .meal{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/meal.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+   }
+   .meal:hover{
+    background-color:#a9de7e;
+}
+   .staff{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/staff.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    
+   }
+   .staff:hover{
+    background-color:#a9de7e;
+}
+   .devApi{
+    background-color:#fafafa;
+    width: 100%;
+    float:left;
+    height: 350px;
+    /* background-image: url(./img/devApi.png);    */
+     background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+   }
+   .devApi:hover{
+    background-color:#a9de7e;
+}
+/* Dashboard_E */
+}
+
+/* 화면 600px 이상 */
+@media only screen and (min-width: 600px) {
+    .col_3 .col_6{
+        width:100%;
+        flex: 0 0 100%;
+    }
+    /*불참사유*/
+    .absence
+    {
+       max-width: 100%;
+       flex: 1 0 100%;
+    }
+    #exampleText{
+        height: 100px;
+    }
+    .col_9{
+        max-width:100%;
+        flex: 1 0 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+     }
+     .table th, .table td{
+        padding:0px !important;
+    }
+    .weeklyMeeing_Title{
+        float: left;
+    }
+    .weekyR{
+        float:right;
+    }
+    /* Dashboard_S */
+    #dashboard {
+        font-size: 20px;
+        cursor: pointer;
+        text-align:center;
+    }
+   .coffee{
+     background-color:#fafafa;
+     width: 50%;
+     float:left;
+     height: 350px;
+     border-right: 1px solid #eee;
+     border-bottom: 1px solid #eee;
+     /* background-image: url(./img/coffee.png); */
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    }
+   .coffee:hover{
+       background-color:#a9de7e;
+   }
+   .meal{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 50%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/meal.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+   }
+   .meal:hover{
+    background-color:#a9de7e;
+}
+   .staff{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    border-right: 1px solid #eee;
+    height: 350px;
+    background-image: url(./img/staff.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    
+   }
+   .staff:hover{
+    background-color:#a9de7e;
+}
+   .devApi{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    height: 350px;
+    /* background-image: url(./img/devApi.png); */
+     background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+   }
+   .devApi:hover{
+    background-color:#a9de7e;
+}
+/* Dashboard_E */
+}
+
+/* 화면 760px 이상 */
+@media only screen and (min-width: 768px) {
+    /* Coffee_S */
+    #roundButton .buttonA{
+        float: right;
+    width: 50px;
+    height: 50px;
+    background: #78d107;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    box-shadow: 10px;
+    box-shadow: 0 5px 9px 0;
+    }
+    .buttonA {
+        background:#1bc9e4 !important;
+        color: #fff !important; 
+    }
+    
+    .buttonA:hover{
+        background-color: #0bb3ce !important;
+        color: white;
+    }
+    .col_3 .col_6{
+       width:100%;
+        flex: 0 0 100%;
+    }
+    /*불참사유*/
+    .absence
+    {
+       max-width: 100%;
+       flex: 1 0 100%;
+    }
+    #exampleText{
+        height: 100px;
+    }
+    .col_9{
+        max-width:100%;
+        flex: 1 0 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+     }
+     .table th, .table td{
+        padding:0px !important;
+    }
+    .weeklyMeeing_Title{
+        float: left;
+    }
+    .weekyR{
+        float:right;
+    }
+    /* Coffee_E */ 
+    /* Dashboard_S */
+    #dashboard {
+        font-size: 20px;
+        cursor: pointer;
+        text-align:center;
+    }
+   .coffee{
+     background-color:#fafafa;
+     width: 50%;
+     float:left;
+     height: 350px;
+     border-right: 1px solid #eee;
+     border-bottom: 1px solid #eee;
+     /* background-image: url(./img/coffee.png); */
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    }
+   .coffee:hover{
+       background-color:#a9de7e;
+   }
+   .meal{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 50%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/meal.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+   }
+   .meal:hover{
+    background-color:#a9de7e;
+}
+   .staff{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    border-right: 1px solid #eee;
+    height: 350px;
+    background-image: url(./img/staff.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    
+   }
+   .staff:hover{
+    background-color:#a9de7e;
+}
+   .devApi{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    height: 350px;
+    /* background-image: url(./img/devApi.png); */
+     background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+   }
+   .devApi:hover{
+    background-color:#a9de7e;
+}
+/* Dashboard_E */
+} 
+
+/* 화면 990px 이상 */
+
+@media only screen and (min-width: 992px) {
+    .col_6{
+        max-width:100%;
+        flex: 1 0 100%;
+        
+     }
+   /* Dashboard_S */ 
+    #dashboard {
+        font-size: 20px;
+        cursor: pointer;
+        text-align:center;
+    }
+   .coffee{
+     background-color:#fafafa;
+     width: 50%;
+     float:left;
+     height: 350px;
+     border-right: 1px solid #eee;
+     border-bottom: 1px solid #eee;
+     /* background-image: url(./img/coffee.png); */
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    }
+   .coffee:hover{
+       background-color:#a9de7e;
+   }
+   .meal{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 50%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/meal.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+   }
+   .meal:hover{
+    background-color:#a9de7e;
+}
+   .staff{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    border-right: 1px solid #eee;
+    height: 350px;
+    background-image: url(./img/staff.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    
+   }
+   .staff:hover{
+    background-color:#a9de7e;
+}
+   .devApi{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    height: 350px;
+    /* background-image: url(./img/devApi.png); */
+     background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+   }
+   .devApi:hover{
+    background-color:#a9de7e;
+}
+/* Dashboard_E */
+} 
+
+
+@media (min-width: 1200px){
+    /* Coffee_S */
+    .weeklyMeeing_Title{
+        float:left;
+        margin-right:10%;
+    }
+    .weekyR{
+        float:none;
+    }
+    .col-xl-6:first-of-type {
+        border-right: 2px solid #f0f4f4;
+    }
+    .scheduled_meeting{
+        height:400px;
+        overflow:hidden;
+        margin-top:20px;
+    }
+    .meeting_History{
+        height:400px;
+        overflow:hidden;
+        margin-top:20px;
+    }
+    .col_3{
+       max-width:25%;
+       flex: 0 0 25%;
+       padding-left: 15px;
+    }
+    .col_6{
+        max-width:50%;
+        flex: 0 0 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+     }
+     .col_9{
+        max-width:75%;
+        flex: 1 0 75%;
+        padding-right: 15px;
+        padding-left: 15px;
+     }
+     .col_12{
+         max-width:100%;
+         flex: 0 0 100%;
+     }
+     /*불참사유*/
+     .absence
+     {
+        max-width: 73%;
+        flex: 0 0 73%;
+        float: right;
+        margin-left: 15px;
+     }
+     .CardBody{
+         height:236px;
+     }
+     #exampleText{
+         height: 170px;
+     }
+    /* Coffee_E */
+    /* Dashboard_S */
+    #dashboard {
+        font-size: 20px;
+        cursor: pointer;
+        text-align:center;
+    }
+   .coffee{
+     background-color:#fafafa;
+     width: 50%;
+     float:left;
+     height: 350px;
+     border-right: 1px solid #eee;
+     border-bottom: 1px solid #eee;
+     /* background-image: url(./img/coffee.png); */
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    }
+   .coffee:hover{
+       background-color:#a9de7e;
+   }
+   .meal{
+    background-color:#fafafa;
+    border-bottom: 1px solid #eee;
+    width: 50%;
+    float:left;
+    height: 350px;
+    background-image: url(./img/meal.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+   }
+   .meal:hover{
+    background-color:#a9de7e;
+}
+   .staff{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    border-right: 1px solid #eee;
+    height: 350px;
+    background-image: url(./img/staff.png);
+     background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+    
+   }
+   .staff:hover{
+    background-color:#a9de7e;
+}
+   .devApi{
+    background-color:#fafafa;
+    width: 50%;
+    float:left;
+    height: 350px;
+    /* background-image: url(./img/devApi.png); */
+     background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+   }
+   .devApi:hover{
+    background-color:#a9de7e;
+}
+/* Dashboard_E */
+}
+
+
+
+

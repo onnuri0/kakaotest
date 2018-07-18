@@ -10,7 +10,7 @@ import thunk from 'redux-thunk';
 import reducer from './modules';
 import penderMiddleware from 'redux-pender';
 import { sessionService  } from 'redux-react-session';
-import 'babel-polyfill';
+
 
 import App from './views/App';
 import Home from './views/Home'; 

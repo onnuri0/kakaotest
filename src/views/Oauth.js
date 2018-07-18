@@ -3,7 +3,8 @@ import axios from 'axios';
 
 import { sessionService } from 'redux-react-session';
 
-import { Card, CardBody, Collapse, Button } from 'reactstrap';
+import { Card, CardBody, Button } from 'reactstrap';
+import Collapse from 'react-css-collapse';
 
 const APT_HOST = 'https://kauth.kakao.com';
 const API_KAPI = "https://kapi.kakao.com";
@@ -37,50 +38,75 @@ class Oauth extends Component {
       code: codeStr
     })
 
-    // return false;
-    return axios.post(url, param, {headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }})
-    .then(res=> {
-        console.log('componentDidMount res>>', res);
+    sessionService.loadSession()
+    .then(token => {
+      console.log('token>>>>',token);
+      if(token.access_tokken !== ''){
+        
         this.setState({
-          access_token: res.data.access_token,
-          refresh_token: res.data.refresh_token
-        });
+          access_token: token.access_tokken,
+          refresh_token: token.refresh_token
+        })  
 
+        console.log('type1>>>>>>>>>>>>>>',this.state);
         this.getInfo();
+
+      }else{
+        
+        return axios.post(url, param, {headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }})
+        .then(res=> {
+            console.log('componentDidMount res>>', res);
+            // this.setState({
+            //   access_token: res.data.access_token,
+            //   refresh_token: res.data.refresh_token
+            // });
+    
+            const tokkenData = {
+              access_tokken: res.data.access_token,
+              refresh_token: res.data.refresh_token
+            }
+           
+            // sessionService.saveSession(tokkenData);
+            sessionService.saveSession({
+              tokkenData
+            }).then((res) => {
+              console.log("저장");
+            });
+            console.log('type1>>>>>>>>>>>>>>',this.state2);
+            this.getInfo();
+        })
+        .catch(err => {
+            console.error("[error is] ", err);
+        });
+      }
     })
-    .catch(err => {
-        console.error("[error is] ", err);
-    });
+
+
+    
   }
 
   getInfo = () =>{
 
-    const tokkenData = {
-      access_tokken: '123',
-      refresh_token: '456'
-    }
-
-    console.log(tokkenData);
-
-    sessionService.loadSession()
-    .then(token => {
-console.log(token);
-    })
     
-    sessionService.saveSession(tokkenData);
-    // sessionService.saveSession({
-    //   tokkenData
-    // }).then((res) => {
-    //   console.log("저장");
-    // });
+
+    
+    // sessionService.loadSession()
+    // .then(token => {
+    //   console.log('token>>>>',token);
+    //   if(this.state.token.length === 0){
+    //     this.setState({
+    //       token: token.access_tokken
+    //     })  
+    //   }
+    // })
 
     const url = API_KAPI+"/v2/user/me";
     const param = "grant_type=authorization_code&client_id="+this.state.client_id+"&redirect_uri="+this.state.redirect_uri+"&code="+this.state.code;
     return axios.post(url, param, {headers: {
       'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-      'Authorization': 'Bearer ' + this.state.access_token
+      'Authorization': 'Bearer ' + '123'
     }})
     .then(res=> {
         console.log('getInfo res>>', res);

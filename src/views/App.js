@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
-
+import { Button, CardBody, Card } from 'reactstrap';
+import Collapse from 'react-css-collapse';
+import './obj_style.css';
 class App extends Component {
   constructor(props) {
     super(props);
