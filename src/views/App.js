@@ -7,6 +7,9 @@ class App extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = { collapse: false };
+
+
+    // console.log('apiurl.coffee',apiurl);
   }
 
   toggle() {
