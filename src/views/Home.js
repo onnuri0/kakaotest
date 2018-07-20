@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { sessionService } from 'redux-react-session';
 
-const APT_HOST = 'https://kauth.kakao.com';
+const API_HOST= 'https://kauth.kakao.com';
+const CLIENT_ID= '?';
+const REDIRECT_URI= 'http%3a%2f%2flocalhost%3a3000%2foauth';
 
 
 class Home extends Component {
   state = {   
-    url : APT_HOST+"/oauth/authorize?client_id=914060f33c670c72ce7c061ed432ef39&redirect_uri=http%3a%2f%2flocalhost%3a3000%2foauth&response_type=code"
+    // url : API_HOST+"/oauth/authorize?client_id=914060f33c670c72ce7c061ed432ef39&redirect_uri=http%3a%2f%2flocalhost%3a3000%2foauth&response_type=code&scope=talk_message",
+    url: `${API_HOST}/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=talk_message,story_publish`
   }
 
   componentDidMount() {
-
     const sessionData = {
-      client_id: '914060f33c670c72ce7c061ed432ef39'
-    } 
-       
+      client_id: 'client_id'
+    }  
     sessionService.saveSession({
       sessionData
     }).then((res) => {
@@ -26,7 +27,7 @@ class Home extends Component {
   logIn = () => {
 
     const uri = "/oauth/authorize?client_id=914060f33c670c72ce7c061ed432ef39&redirect_uri=http%3a%2f%2flocalhost%3a3000%2foauth&response_type=code";
-    return  axios.get(APT_HOST+uri, {headers: {
+    return  axios.get(API_HOST+uri, {headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
       'Content-Type': 'application/json; charset=UTF-8'

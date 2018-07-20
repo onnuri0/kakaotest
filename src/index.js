@@ -4,7 +4,7 @@ import './index.css';
 import {BrowserRouter,  Route, Switch} from 'react-router-dom';
 
 
-import { createStore, applyMiddleware, combineReducers  } from 'redux';
+import { createStore, applyMiddleware  } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import reducer from './modules';

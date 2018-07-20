@@ -124,6 +124,7 @@ module.exports = (env = {}) => {
       ),
       new webpack.DefinePlugin({
           'env.NODE_ENV': JSON.stringify("development"),
+          'env.NODE_ENV2': JSON.stringify("development1111111111111"),
           'apiurl.coffee' : JSON.stringify('http://coffee.anbtech.net:8882'),
           'apiurl.ui' : JSON.stringify('http://coffee.anbtech.net:3000'),
           'apiurl.api' : JSON.stringify('http://api.anbtech.net'),
