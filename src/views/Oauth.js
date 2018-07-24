@@ -30,7 +30,10 @@ class Oauth extends Component {
   componentDidMount() {
     
     const codeArr = window.location.search.substr(1).split("=");
+
+    console.log('codeArr',codeArr);
     const codeStr = codeArr[1];
+    console.log('codeStr',codeStr);
     // const url = API_HOST + '/oauth/token';
     // const param = "grant_type=authorization_code&client_id="+this.state.client_id+"&redirect_uri="+this.state.redirect_uri+"&code="+codeStr;
     const url = `${API_HOST}/oauth/token`;

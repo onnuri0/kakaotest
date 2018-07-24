@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
+    "kakao": "file:src/containers/kakao",
     "react": "^16.4.1",
     "react-css-collapse": "^3.3.1",
     "react-device-storage": "^1.0.0",
